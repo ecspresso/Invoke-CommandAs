@@ -1,8 +1,4 @@
-[![PSGallery Version](https://img.shields.io/powershellgallery/v/Invoke-CommandAs.svg?style=for-the-badge&label=PowerShell%20Gallery)](https://www.powershellgallery.com/packages/Invoke-CommandAs/)
-[![PSGallery Downloads](https://img.shields.io/powershellgallery/dt/Invoke-CommandAs.svg?style=for-the-badge&label=Downloads)](https://www.powershellgallery.com/packages/Invoke-CommandAs/)
-
-[![Azure Pipeline](https://img.shields.io/azure-devops/build/mkellerman/Invoke-CommandAs/8.svg?style=for-the-badge&label=Azure%20Pipeline)](https://dev.azure.com/mkellerman/Invoke-CommandAs/_build?definitionId=8)
-[![Analytics](https://ga-beacon.appspot.com/UA-133882862-1/Invoke-CommandAs?pixel)](https://github.com/mkellerman)
+# Forked and made into a single file.
 
 # Invoke-CommandAs
 
@@ -67,24 +63,6 @@ $ScriptBlock = { [System.Security.Principal.Windowsidentity]::GetCurrent() }
 Invoke-CommandAs -ScriptBlock $ScriptBlock -AsSystem
 ```
 
-## Install Module (PSv5):
-```powershell
-Install-Module -Name Invoke-CommandAs
-```    
-
-## Install Module (PSv4 or earlier):
-```
-Copy Invoke-CommandAs folder to:
-C:\Program Files\WindowsPowerShell\Modules\Invoke-CommandAs
-```
-
-## Import Module directly from GitHub:
-```
-$WebClient = New-Object Net.WebClient
-$WebClient.DownloadString("https://raw.githubusercontent.com/mkellerman/Invoke-CommandAs/master/Invoke-CommandAs/Private/Invoke-ScheduledTask.ps1") | Set-Content -Path ".\Invoke-ScheduledTask.ps1"
-$WebClient.DownloadString("https://raw.githubusercontent.com/mkellerman/Invoke-CommandAs/master/Invoke-CommandAs/Public/Invoke-CommandAs.ps1") | Set-Content -Path ".\Invoke-CommandAs.ps1"
-Import-Module ".\Invoke-ScheduleTask.ps1"
-Import-Module ".\Invoke-CommandAs.ps1"
 ```
 One liner (dont write to disk):
 ```
